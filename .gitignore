@@ -1,0 +1,20 @@
+# Never commit real project state — this repo publishes the method, not the work.
+CURRENT_STATE.md
+CONTINUITY.md
+!templates/CURRENT_STATE.md
+!templates/CONTINUITY.md
+
+# Evidence, outputs, secrets
+outputs/
+evidence/
+*.log
+.env
+*.key
+*.pem
+secrets*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
