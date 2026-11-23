@@ -63,7 +63,7 @@ The last two lines are the protocol working. The agent found the fix, did not ap
 
 **Me:**
 
-> Yes, draft it. Then update `CURRENT_STATE.md` and append to `CONTINUITY.md`.
+> Yes, draft it. Then save a continuity point.
 
 **Agent writes to `CONTINUITY.md`:**
 
@@ -129,6 +129,39 @@ Review and apply drafts/gateway-201.yaml, then re-run the validator.
 
 Tomorrow's session starts from a position, not from a reconstruction.
 
-Three weeks from now, when someone asks *"why is that contract declaring 201?"*, the answer is a decision with its reasoning attached, not an archaeological dig.
+Three weeks from now, when someone asks *"why is that contract declaring 201?"*, the answer is one entry in `DECISIONS.md` — the decision, the reasoning, and the alternative that lost — not an archaeological dig through a dated log.
 
 And the "do not repeat" list keeps growing, which means the agent's known-bad space grows with the project instead of resetting every morning.
+
+---
+
+## The other two files
+
+This session also produced one entry for each of them, which is typical:
+
+**`DECISIONS.md`**
+
+```markdown
+## D-14 — Align the contract to the gateway's 201, not the gateway to the contract
+
+**Date:** 2026-10-02 · **Status:** active
+
+### Decision
+The declared response for the acknowledgement becomes 201 with a body schema.
+
+### Why
+201 is correct REST semantics for a created resource. The gateway is right;
+the contract was written from an assumption, not from the implementation.
+
+### Alternatives rejected
+- Change the gateway to return 200 — rejected: it would make the gateway wrong
+  to be compatible with a document, and other consumers may already rely on 201.
+
+### What would make us revisit this
+Evidence that another consumer depends on the declared 200.
+```
+
+**`OPERATIONS.md`** — nothing this time. The diagnosis used an existing procedure;
+nothing new was proven end to end. An empty entry is the correct outcome more often
+than not, and writing one anyway is how `OPERATIONS.md` fills up with things that
+do not work.
