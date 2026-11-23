@@ -1,8 +1,12 @@
 # Never commit real project state — this repo publishes the method, not the work.
 CURRENT_STATE.md
 CONTINUITY.md
+DECISIONS.md
+OPERATIONS.md
 !templates/CURRENT_STATE.md
 !templates/CONTINUITY.md
+!templates/DECISIONS.md
+!templates/OPERATIONS.md
 
 # Evidence, outputs, secrets
 outputs/
